@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice d'achats</title>
+    <link rel="stylesheet" href="CSS/MAIN.CSS">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="icon" href="SRC/calculator.png" type="image/png">
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <form class="container">
+        <div class="title">
+            <h1>Calcul du ticket d'achat</h1>
+            <p id="display">Choisir les articles qui composent votre commande</p>
+        </div>
+
+        <div class="column">
+            <div class="row">
+                <div class="check">
+                    <input type="checkbox" name="Banane" value="2">
+                    <label for="Banane">Banane</label>
+                </div>
+
+                <div class="input">
+                    <input type="number" name="Banane-input" value="0" id="Banane-input" min="0" step="1>
+                    <label for="Banane-input">Unité</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="check">
+                    <input type="checkbox" name="Ananas" value="15">
+                    <label for="Ananas">Ananas</label>
+                </div>
+
+                <div class="input">
+                    <input type="number" name="Ananas-input" value="0" id="Ananas-input" min="0" step="1>
+                    <label for="Ananas-input">Unité</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="check">
+                    <input type="checkbox" name="Yaourt" value="3">
+                    <label for="Yaourt">Yaourt</label>
+                </div>
+
+                <div class="input">
+                    <input type="number" name="Banane-input" value="0" id="Yaourt-input" min="0" step="1>
+                    <label for="Yaourt-input">Unité</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="check">
+                    <input type="checkbox" name="Pistache" value="0.1">
+                    <label for="Pistache">Pistache</label>
+                </div>
+
+                <div class="input">
+                    <input type="number" name="Pistache-input" value="0" id="Pistache-input" min="0" step="1>
+                    <label for="Pistache-input">Grammes</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="check">
+                    <input type="checkbox" name="Noix" value="0.1">
+                    <label for="Noix">Noix</label>
+                </div>
+
+                <div class="input">
+                    <input type="number" name="Noix-input" value="0" id="Noix-input" id="Noix-input" min="0" step="1>
+                    <label for="Noix-input">Grammes</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="check">
+                    <input type="checkbox" name="Cacahuètes" value="0.03" >
+                    <label for="Cacahuètes">Cacahuètes</label>
+                </div>
+
+                <div class="input">
+                    <input type="number" name="Cacahuètes-input" value="0" id="Cacahuètes-input" min="0" step="1>
+                    <label for="Cacahuètes-input">Grammes</label>
+                </div>
+
+            </div>
+
+           
+            
+        </div>
+
+        <div class="buttons">
+            <button class="row button" type="button" id="calculer">CALCULER</button>
+            <button class="row button" type="button" id="clear">EFFACER</button>
+        </div>
+
+        <div class="output">
+            <p>Le Prix Total de la Commande:</p>
+
+            <div class="output-text">
+                <output>0,00</output>
+
+                <p>Dirhams</p>
+            </div>
+        </div>
+        
+    </form>
+
+    <audio src="SRC/error.wav" id="error"></audio>
+    <audio src="SRC/success.wav" id="success"></audio>
+    <audio src="SRC/negative.wav" id="negative"></audio>
+    <audio src="SRC/click-tone.wav" id="click-tone"></audio>
+    <audio src="SRC/techs-elect.wav" id="tech-select"></audio>
+
+    
+
+</body>
+
+<script type="text/javascript" src="JS/SCRIPT.JS"></script>
+
+</html>
